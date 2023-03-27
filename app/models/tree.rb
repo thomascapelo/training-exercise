@@ -7,5 +7,5 @@ class Tree < ApplicationRecord
   validates :fruit_type, inclusion: {in: FRUIT_TYPES}
   validates :description, length: { in: 20..280 }
   validates :quantity_per_year, numericality: { greater_than: 0 }
-  validates :price, numericality: { greater_than: 0 }
+  validates :price_per_year, numericality: { greater_than: 0 }
 end

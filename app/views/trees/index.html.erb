@@ -1,11 +1,11 @@
 <div class ="container">
     <% @trees.each do |tree| %>
-        <%= tree.name %>
-        <%= tree.address%>
-        <%= tree.description %>
-        <%= tree.fruit_type %>
-        <%= tree.price_per_year %>
-        <%= tree.quantity_per_year %>
+        <%= link_to tree.name, tree_path(tree) %> <p></p>
+        <%= tree.address%> <p></p>
+        <%= tree.description %> <p></p>
+        <%= tree.fruit_type %> <p></p>
+        <%= tree.price_per_year %> <p></p>
+        <%= tree.quantity_per_year %> <p></p>
     <% end %>
 
 

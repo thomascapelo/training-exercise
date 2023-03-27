@@ -1,0 +1,12 @@
+<div class='container'>
+    <%= simple_form_for @tree do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :fruit_type %>
+        <%= f.input :description %>
+        <%= f.input :price_per_year %>
+        <%= f.input :quantity_per_year %>
+        <%= f.submit class: "btn btn-primary"%>
+    <% end %>
+</div>
+

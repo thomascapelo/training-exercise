@@ -1,0 +1,13 @@
+<div class ="container">
+    <% @trees.each do |tree| %>
+        <%= tree.name %>
+        <%= tree.address%>
+        <%= tree.description %>
+        <%= tree.fruit_type %>
+        <%= tree.price_per_year %>
+        <%= tree.quantity_per_year %>
+    <% end %>
+
+
+
+</div>

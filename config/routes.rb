@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "/instructions", to: "pages#instructions", as: "instructions"
 
-  resources :trees
+  resources :trees do 
+    resources :adoptions, only: [:new, :create]
+  end
 end

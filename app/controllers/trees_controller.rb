@@ -14,7 +14,7 @@ before_action :set_tree, only: [:show, :edit, :update, :destroy]
         if @tree.save
             redirect_to tree_path(@tree)
         else
-            render :status, :unprocessable_entity
+            render :new, status: :unprocessable_entity
         end
     end
 

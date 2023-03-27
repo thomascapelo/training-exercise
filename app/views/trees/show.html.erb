@@ -1,8 +1,12 @@
 <div>
-    <%= @tree.name %>
-    <%= @tree.address %>  
+   <h1><%= @tree.name %></h1>
+    <tr>
+        <th scope="row">Address</th>
+        <td><%= @tree.address %></td>
+    </tr>
     <%= @tree.description %>
     <%= @tree.fruit_type %>
     <%= @tree.price_per_year %>
     <%= @tree.quantity_per_year %>
+    <%= link_to "Edit", edit_tree_path(@tree) %>
 </div>

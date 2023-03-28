@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get "/instructions", to: "pages#instructions", as: "instructions"
 
   resources :trees do 
-    resources :adoptions, only: [:new, :create]
+    resources :adoptions, only: [:new, :create, :index]
   end
 end

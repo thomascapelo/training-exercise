@@ -1,6 +1,6 @@
 class Tree < ApplicationRecord
   belongs_to :user
-  has_many :adoptions, dependent: :destroy
+  has_one :adoption, dependent: :destroy
 
   FRUIT_TYPES = ["Apple", "Apricot", "Cherry", "Chestnut", "Coconut tree", "Fig", "Grapefruit", "Hazel", "Mandarin", "Mango", "Mirabellier", "Mulberry", "Olivier", "Orange", "Pear", "Plum"]
   validates :name, :address, :fruit_type, :description, :price_per_year, :quantity_per_year, presence: true

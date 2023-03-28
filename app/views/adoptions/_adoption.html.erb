@@ -2,7 +2,5 @@
 
   <%= simple_form_for [@tree, @adoption] do |f| %>
     <%= f.input :name %>
-    <%= f.input :starts_at, as: :date_select %>
-    <%= f.input :ends, as: :date_select %>
     <%= f.submit 'Click to adopt' %>
   <% end %>

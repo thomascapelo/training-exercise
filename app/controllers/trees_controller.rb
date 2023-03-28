@@ -19,6 +19,7 @@ before_action :set_tree, only: [:show, :edit, :update, :destroy]
     end
 
     def show
+        @adoption = Adoption.new
     end
 
     def edit 

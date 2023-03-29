@@ -2,11 +2,13 @@ class TreesController < ApplicationController
 before_action :set_tree, only: [:show, :edit, :update, :destroy]
     def index
         @trees = Tree.all
+
         @markers = @trees.geocoded.map do |flat|
             {
               lat: flat.latitude,
               lng: flat.longitude
             }
+        end
     end
 
     def new
@@ -54,4 +56,5 @@ before_action :set_tree, only: [:show, :edit, :update, :destroy]
     def set_tree
         @tree = Tree.find(params[:id])
     end
+
 end

@@ -11,7 +11,7 @@ before_action :set_tree, only: [:show, :edit, :update, :destroy]
     def create
         @tree = Tree.new(tree_params)
         @tree.user = current_user
-        if @tree.save
+        if @tree.save!
             redirect_to tree_path(@tree)
         else
             render :new, status: :unprocessable_entity
@@ -43,7 +43,7 @@ before_action :set_tree, only: [:show, :edit, :update, :destroy]
     private
 
     def tree_params
-        params.require(:tree).permit(:name, :address, :fruit_type, :description, :price_per_year, :quantity_per_year)
+        params.require(:tree).permit(:name, :photo, :address, :fruit_type, :description, :price_per_year, :quantity_per_year, :category)
     end
 
     def set_tree

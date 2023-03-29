@@ -8,10 +8,10 @@
     <%= @tree.fruit_type %>
     <%= @tree.price_per_year %>
     <%= @tree.quantity_per_year %>
+    <%= cl_image_tag @tree.photo.key, height: 300, width: 400, crop: :fill %>
     <%= link_to "Edit", edit_tree_path(@tree) %>
   <p><%= link_to 'Delete', tree_path(@tree),  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
 
     <%= render 'adoptions/adoption' %>
-    <%= console %>
 </div>
 

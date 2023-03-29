@@ -14,6 +14,9 @@
     <%= link_to "Adoptions Index", adoptions_path%>
     <%# Doesn't work but I don't know why - Guess is instance variable @tree is not defined on my trees/index.  %>
 
-
+    <div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div>

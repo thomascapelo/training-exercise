@@ -1,10 +1,11 @@
 <div class="container">
 
     <p>Your Adoptions</p>
-    <%= if @adoptions.any?%>
-        <%= @adoptions.each do |adoption| %>
-        <%= link_to adoption.name, adoption_path(adoption)%>
-        <%= else %>
+    <% unless @adoptions.nil?%>
+        <% @adoptions.each do |adoption| %>
+        <%= adoption.name %>
+            <% end %>
+        <% else %>
         <p>You haven't adopted a tree yet!</p>
     <% end %>
 </div>
